@@ -1,0 +1,24 @@
+﻿@model WebDevelopmentBackend.Models.VideoModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@Model.ID</title>
+</head>
+<body>
+    <div>
+        <h1>@Model.Title</h1>
+        <p>@Model.Description</p>
+
+        <video src="@Model.Source" controls></video>
+
+
+    </div>
+</body>
+</html>

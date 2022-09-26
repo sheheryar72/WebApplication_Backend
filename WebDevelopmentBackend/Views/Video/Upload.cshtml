@@ -1,0 +1,44 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Upload Video</title>
+</head>
+<body>
+    <div>
+        @if (TempData["Message"] != null)
+        {
+            <p style="color: green;">@TempData["Message"].ToString()</p>
+        }
+
+        @if (TempData["Error"] != null)
+        {
+            <p style="color: orangered;">@TempData["Error"].ToString()</p>
+        }
+
+        <form method="POST" action="/Video/PostVideo">
+            <div>
+                <label>Title:</label>
+                <input type="text" name="Title" placeholder="Enter video title here" required />
+            </div>
+
+            <div>
+                <label>Description:</label>
+                <input type="text" name="Description" placeholder="Enter video description here" required />
+            </div>
+
+            <div>
+                <input type="file" name="videoFile" required />
+            </div>
+
+            <input type="submit" />
+
+        </form>
+    </div>
+</body>
+</html>

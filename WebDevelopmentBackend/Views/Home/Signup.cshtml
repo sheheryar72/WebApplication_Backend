@@ -1,0 +1,47 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Sign Up</title>
+</head>
+<body>
+    <div>
+        <form id="signup-form" method="POST" action="/Home/CreateUser">
+
+            <div>
+                <label>Email:</label>
+                <input type="email" name="Email" placholder="Enter email here" required />
+            </div>
+
+            <div>
+                <label>Name:</label>
+                <input type="text" name="Name" placholder="Enter name here" required />
+            </div>
+
+            <div>
+                <label>Password:</label>
+                <input id="password" type="password" name="Password" placholder="Enter password here" required />
+            </div>
+
+            <div>
+                <label>Gender:</label>
+                <input type="radio" name="Gender" value="m" checked /> Male
+                <input type="radio" name="Gender" value="f" /> Female
+            </div>
+
+            <div>
+                <label>Date of Birth:</label>
+                <input type="date" name="DOB" required />
+            </div>
+
+            <input type="submit" />
+
+        </form>
+    </div>
+</body>
+</html>
